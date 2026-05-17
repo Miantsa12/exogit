@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Encoder</title>
+
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🔐 Crypto Encoder</h1>
+
+        <p class="subtitle">
+            Chiffrement César & Atbash
+        </p>
+
+        <form method="POST" action="/">
+
+            <input 
+                type="text" 
+                name="message" 
+                placeholder="Entrer votre message..." 
+                required
+            >
+
+            <div class="buttons">
+
+                <button 
+                    type="submit" 
+                    name="algo" 
+                    value="cesar"
+                    class="cesar"
+                >
+                    César
+                </button>
+
+                <button 
+                    type="submit" 
+                    name="algo" 
+                    value="atbash"
+                    class="atbash"
+                >
+                    Atbash
+                </button>
+
+            </div>
+
+        </form>
+
+        <div class="result-box">
+
+            <p class="result-title">Résultat :</p>
+
+            <p class="result">
+                {{.Resultat}}
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
