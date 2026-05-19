@@ -11,7 +11,6 @@ type Data struct {
 }
 
 func cesar(message string) string {
-
 	decalage := 3
 	resultat := ""
 
@@ -27,7 +26,15 @@ func atbash(message string) string {
 	resultat := ""
 
 	for i := 0; i < len(message); i++ {
-		resultat += string('Z' - (message[i] - 'A'))
+		lettre := message[i]
+		if lettre >= 'A' && lettre <= 'Z' {
+
+    resultat += string('Z' - (lettre - 'A'))
+
+} else if lettre >= 'a' && lettre <= 'z' {
+
+    resultat += string('z' - (lettre - 'a'))
+}
 	}
 
 	return resultat
